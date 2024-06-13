@@ -1,18 +1,24 @@
-#overloading
-class complex:
-    def __init__(self,x,y):
-        self.x=x
-        self.y=y
-    
-    def __str__(self):
-        return f"{self.x}x + {self.y}y"
+#in tihs file we will learn about time module and figure out the complexity between for loop and while loop
 
-    def __add__(self,other):
-        return complex(self.x + other.x , self.y +other.y)
-    
-c=complex(2,3)
-print(c)
-c1=complex(4,5)
-print(c1)
-c3=c+c1
-print(c3)
+import time
+import os
+
+#first we will create for loop
+def loop():
+    for i in range(5000):
+        print(i)
+
+#now we will create while loop
+def whileloop():
+    i=0
+    while i<5000:
+        i+=1
+        print(i)
+#here we will call the loops
+init=time.time()
+loop()
+t1=time.time()-init
+init=time.time()
+whileloop()
+print(time.time()-init)
+print(t1)
