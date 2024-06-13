@@ -9,7 +9,7 @@ def decorator(func):
 #here we will execute the original function
 #@decorator
 #def guddan():
- #   print("i love to explore this")
+#   print("i love to explore this")
 @decorator
 def add():
     a=int(input("enter the first number"))
